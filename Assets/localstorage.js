@@ -1,12 +1,12 @@
-var saveButton = $('#save-btn');
-var saveButton2 = $('#save-btn2');
-var saveButton3 = $('#save-btn3');
-var saveButton4 = $('#save-btn4');
-var saveButton5 = $('#save-btn5');
-var saveButton6 = $('#save-btn6');
-var saveButton7 = $('#save-btn7');
-var saveButton8 = $('#save-btn8');
-var saveButton9 = $('#save-btn9');
+// var saveButton = $('#save-btn');
+// var saveButton2 = $('#save-btn2');
+// var saveButton3 = $('#save-btn3');
+// var saveButton4 = $('#save-btn4');
+// var saveButton5 = $('#save-btn5');
+// var saveButton6 = $('#save-btn6');
+// var saveButton7 = $('#save-btn7');
+// var saveButton8 = $('#save-btn8');
+// var saveButton9 = $('#save-btn9');
 var infoEl = $('#info-form');
 var infoEl2 = $('#info-form2');
 var infoEl3 = $('#info-form3');
@@ -18,20 +18,17 @@ var infoEl8 = $('#info-form8');
 var infoEl9 = $('#info-form9');
 
 
-saveButton.on('click', saveWork);
 
+$('#save-btn').click(saveWork)
 function saveWork(event){
     event.preventDefault();
     var infoInput = $.trim(infoEl.val())
     var savedInfo = JSON.parse(localStorage.getItem('infoInput')) || [];
     savedInfo.push(infoInput);
     localStorage.setItem("infoInput", JSON.stringify(savedInfo));
-    infoEl.val(savedInfo)
-   
 }
 
-saveButton2.on('click', saveWork2);
-
+$('#save-btn2').click(saveWork2)
 function saveWork2(event){
     event.preventDefault();
     var infoInput = $.trim(infoEl2.val())
@@ -41,8 +38,8 @@ function saveWork2(event){
     
 }
 
-saveButton3.on('click', saveWork3);
 
+$('#save-btn3').click(saveWork3)
 function saveWork3(event){
     event.preventDefault();
     var infoInput = $.trim(infoEl3.val())
@@ -52,8 +49,8 @@ function saveWork3(event){
     
 }
 
-saveButton4.on('click', saveWork4);
 
+$('#save-btn4').click(saveWork4)
 function saveWork4(event){
     event.preventDefault();
     var infoInput = $.trim(infoEl4.val())
@@ -63,8 +60,8 @@ function saveWork4(event){
     
 }
 
-saveButton5.on('click', saveWork5);
 
+$('#save-btn5').click(saveWork5)
 function saveWork5(event){
     event.preventDefault();
     var infoInput = $.trim(infoEl5.val())
@@ -74,8 +71,8 @@ function saveWork5(event){
     
 }
 
-saveButton6.on('click', saveWork6);
 
+$('#save-btn6').click(saveWork6)
 function saveWork6(event){
     event.preventDefault();
     var infoInput = $.trim(infoEl6.val())
@@ -85,8 +82,8 @@ function saveWork6(event){
     
 }
 
-saveButton7.on('click', saveWork7);
 
+$('#save-btn7').click(saveWork7)
 function saveWork7(event){
     event.preventDefault();
     var infoInput = $.trim(infoEl7.val())
@@ -96,8 +93,8 @@ function saveWork7(event){
     
 }
 
-saveButton8.on('click', saveWork8);
 
+$('#save-btn8').click(saveWork8)
 function saveWork8(event){
     event.preventDefault();
     var infoInput = $.trim(infoEl8.val())
@@ -107,8 +104,8 @@ function saveWork8(event){
     
 }
 
-saveButton9.on('click', saveWork9);
 
+$('#save-btn9').click(saveWork9)
 function saveWork9(event){
     event.preventDefault();
     var infoInput = $.trim(infoEl9.val())
