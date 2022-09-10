@@ -23,7 +23,10 @@ time9 = moment('17:00:00',timeFormat)
 time10 = moment('18:00:00',timeFormat)
 
 
+
 $('#currentDay').text(today.format('MMMM Do YYYY'));
+
+// present if statements
 
 if( (moment().isBetween(time1, time2))){
     $('#t1-task-box').removeClass('future');
@@ -61,18 +64,41 @@ if( (moment().isBetween(time1, time2))){
     $('#t9-task-box').removeClass('future');
     $('#t9-task-box').addClass('present');
 
-} if ((moment().isBetween(time1, time10))){
-    $('.past-div').attr('future');
-    
-} if ((moment().isAfter(time10))){
-    $('.past-div').removeClass('future');
-    $('.past-div').addClass('past');
-    
-}
+ // past if statements
 
-// else {
-//     console.log('hello world');
-//     $('.past-div').removeClass('future');
-//     $('.past-div').addClass('past');
-// }
+} if( (moment().isBetween(time2, time10))){
+    $('#t1-task-box').removeClass('future');
+    $('#t1-task-box').addClass('past');
+    
+} if( (moment().isBetween(time3, time10))){
+    $('#t2-task-box').removeClass('future');
+    $('#t2-task-box').addClass('past');
+
+} if( (moment().isBetween(time4, time10))){
+    $('#t3-task-box').removeClass('future');
+    $('#t3-task-box').addClass('past');
+
+} if( (moment().isBetween(time5, time10))){
+    $('#t4-task-box').removeClass('future');
+    $('#t4-task-box').addClass('past');
+
+} if( (moment().isBetween(time6, time10))){
+    $('#t5-task-box').removeClass('future');
+    $('#t5-task-box').addClass('past');
+
+} if( (moment().isBetween(time7, time10))){
+    $('#t6-task-box').removeClass('future');
+    $('#t6-task-box').addClass('past');
+
+} if( (moment().isBetween(time8, time10))){
+    $('#t7-task-box').removeClass('future');
+    $('#t7-task-box').addClass('past');
+
+} if( (moment().isBetween(time9, time10))){
+    $('#t8-task-box').removeClass('future');
+    $('#t8-task-box').addClass('past');
+
+} else {
+    $('.past-div').attr('future');
+}
 
