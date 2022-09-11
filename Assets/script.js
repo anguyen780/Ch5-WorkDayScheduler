@@ -10,7 +10,7 @@ var time7 = $('#t7');
 var time8 = $('#t8');
 var time9 = $('#t9');
 var time10;
-
+// declares times for each row
 time1 = moment('09:00:00',timeFormat)
 time2 = moment('10:00:00',timeFormat)
 time3 = moment('11:00:00',timeFormat)
@@ -22,6 +22,8 @@ time8 = moment('16:00:00',timeFormat)
 time9 = moment('17:00:00',timeFormat)
 time10 = moment('18:00:00',timeFormat)
 
+
+// checks time each second 
 function timeCapture(){
     setInterval(function(){
         timeCheck();
@@ -31,7 +33,7 @@ function timeCapture(){
 
 $('#currentDay').text(today.format('MMMM Do YYYY'));
 
-
+// makes task box divs change color depending on time it is during the work day
 function timeCheck(){
     if( (moment().isBetween(time1, time2))){
         $('#t1-task-box').removeClass('future');
@@ -111,11 +113,9 @@ function timeCheck(){
         $('#t8-task-box').removeClass('present');
         $('#t8-task-box').addClass('past');
     
-    } else {
-        $('.past-div').attr('future');
-    }
-}
-
+    } 
+};
+//assures that the document is always checking the current time
 $(document).ready(timeCapture)
 
 
